@@ -9,6 +9,14 @@ const lightbox = document.querySelector("[data-lightbox]");
 const lightboxImage = document.querySelector("[data-lightbox-image]");
 const lightboxClose = document.querySelector("[data-lightbox-close]");
 const lightboxTriggers = document.querySelectorAll("[data-lightbox-src]");
+const videoModal = document.querySelector("[data-video-modal]");
+const videoModalPanel = document.querySelector("[data-video-modal-panel]");
+const videoModalPlayer = document.querySelector("[data-video-modal-player]");
+const videoModalClose = document.querySelector("[data-video-modal-close]");
+const videoTriggers = document.querySelectorAll("[data-video-src]");
+
+let activeLightboxTrigger = null;
+let activeVideoTrigger = null;
 
 const updateHeader = () => {
   if (!header) return;
@@ -19,6 +27,7 @@ const closeNav = () => {
   body.classList.remove("nav-open");
   if (navToggle) {
     navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Открыть разделы сайта");
   }
 };
 
@@ -26,6 +35,7 @@ if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
     const isOpen = body.classList.toggle("nav-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Закрыть разделы сайта" : "Открыть разделы сайта");
   });
 
   nav.addEventListener("click", (event) => {
@@ -54,15 +64,19 @@ const closeLightbox = () => {
   lightboxImage.removeAttribute("src");
   lightboxImage.alt = "";
   body.classList.remove("lightbox-open");
+  activeLightboxTrigger?.focus();
+  activeLightboxTrigger = null;
 };
 
 if (lightbox && lightboxImage) {
   lightboxTriggers.forEach((trigger) => {
     trigger.addEventListener("click", () => {
+      activeLightboxTrigger = trigger;
       lightboxImage.src = trigger.dataset.lightboxSrc;
       lightboxImage.alt = trigger.dataset.lightboxAlt || "";
       lightbox.hidden = false;
       body.classList.add("lightbox-open");
+      lightboxClose?.focus();
     });
   });
 
@@ -77,6 +91,67 @@ if (lightbox && lightboxImage) {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !lightbox.hidden) {
       closeLightbox();
+    }
+  });
+}
+
+const closeVideoModal = () => {
+  if (!videoModal || !videoModalPlayer) return;
+
+  videoModalPlayer.pause();
+  videoModalPlayer.removeAttribute("src");
+  videoModalPlayer.load();
+  videoModal.hidden = true;
+  body.classList.remove("video-modal-open");
+  activeVideoTrigger?.focus();
+  activeVideoTrigger = null;
+};
+
+if (videoModal && videoModalPanel && videoModalPlayer && videoModalClose) {
+  videoTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const source = trigger.dataset.videoSrc;
+      if (!source) return;
+
+      activeVideoTrigger = trigger;
+      videoModalPlayer.src = source;
+      videoModal.hidden = false;
+      body.classList.add("video-modal-open");
+      videoModalClose.focus();
+
+      const playPromise = videoModalPlayer.play();
+      if (playPromise) {
+        playPromise.catch(() => {
+          videoModalPlayer.focus();
+        });
+      }
+    });
+  });
+
+  videoModalClose.addEventListener("click", closeVideoModal);
+
+  videoModal.addEventListener("click", (event) => {
+    if (event.target === videoModal) {
+      closeVideoModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (videoModal.hidden) return;
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeVideoModal();
+      return;
+    }
+
+    if (event.key === "Tab") {
+      const focusable = [videoModalClose, videoModalPlayer];
+      const currentIndex = focusable.indexOf(document.activeElement);
+      const direction = event.shiftKey ? -1 : 1;
+      const nextIndex = (currentIndex + direction + focusable.length) % focusable.length;
+      event.preventDefault();
+      focusable[nextIndex].focus();
     }
   });
 }

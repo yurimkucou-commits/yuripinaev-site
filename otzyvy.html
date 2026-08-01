@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Отзывы | Юра Пинаев</title>
-  <meta name="description" content="Отзывы клиентов о событиях с Юрой Пинаевым.">
+  <meta name="description" content="Отзывы о свадьбах, корпоративах и частных событиях с Юрой Пинаевым, а также оригиналы сообщений гостей и организаторов.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,15 +12,20 @@
 </head>
 <body>
   <header class="site-header" data-header>
-    <a class="brand" href="index.html" aria-label="Юра Пинаев, на главную"><span class="brand__name">Юра Пинаев</span><span class="brand__caption">сценический артист и ведущий мероприятий</span></a>
-    <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
+    <a class="brand" href="index.html" aria-label="Юра Пинаев, на главную"><span class="brand__name">Юра Пинаев</span><span class="brand__caption">ведущий • музыка • импровизация</span></a>
+    <button class="nav-toggle" type="button" aria-label="Открыть разделы сайта" aria-expanded="false" data-nav-toggle>
+      <span class="nav-toggle__label">Разделы</span>
+      <span class="nav-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+    </button>
     <nav class="site-nav" aria-label="Основная навигация" data-nav>
+      <a class="site-nav__home" href="index.html">Главная</a>
       <a href="korporativy.html">Корпоративы</a><a href="svadby.html">Свадьбы</a><a href="yubilei.html">Юбилеи</a><a href="muzyka.html">Музыка</a><a href="otzyvy.html" aria-current="page">Отзывы</a><a href="contacts.html">Контакты</a>
+      <a class="button site-nav__cta" href="https://t.me/yuripinaev" target="_blank" rel="noopener">Проверить дату</a>
     </nav>
   </header>
   <main>
     <section class="page-hero section-reveal">
-      <div><p class="eyebrow">Reviews</p><h1>Отзывы</h1></div>
+      <div><p class="eyebrow">Отзывы</p><h1>Отзывы</h1></div>
       <p>Живые слова людей после важных вечеров.</p>
     </section>
 
@@ -39,9 +44,9 @@
 
       <article class="review-card review-card--large">
         <div class="review-card__top">
-          <img class="review-avatar" src="assets/images/optimized/reviews/avatars/IMG_20260501_224400_450.webp" alt="Елена Волк" width="300" height="300" loading="lazy" decoding="async">
+          <img class="review-avatar" src="assets/images/optimized/reviews/avatars/IMG_20260501_224400_450.webp" alt="Елена Пельменьщикова" width="300" height="300" loading="lazy" decoding="async">
           <div>
-            <h3>Елена Волк</h3>
+            <h3>Елена Пельменьщикова</h3>
             <p>невеста</p>
           </div>
         </div>
@@ -95,7 +100,7 @@
             <p>вечер встречи врачей-педиатров</p>
           </div>
         </div>
-        <p class="review-card__text">Спасибо за проведение мероприятия! Всё было чудесно. Очень понравился конкурс караоке — вовлечение и репертуар были 🔥 Идея с фотоальбомом тоже удалась. Спасибо за энергию, харизму, артистизм и медицинские шуточки — вы были с нами “на одной волне”.</p>
+        <p class="review-card__text">Спасибо за проведение мероприятия! Всё было чудесно. Очень понравился конкурс караоке — вовлечение и репертуар были отличными. Идея с фотоальбомом тоже удалась. Спасибо за энергию, харизму, артистизм и медицинские шуточки — вы были с нами “на одной волне”.</p>
         <p class="review-card__event">Встреча врачей-педиатров</p>
       </article>
 
@@ -138,7 +143,7 @@
 
     <section class="proofs-section section-reveal" aria-label="Оригиналы сообщений">
       <div class="section-heading">
-        <p class="eyebrow">Proof</p>
+        <p class="eyebrow">Подтверждения</p>
         <h2>Оригиналы сообщений</h2>
         <p>Несколько живых сообщений после мероприятий — как подтверждение отзывов.</p>
       </div>
@@ -178,7 +183,17 @@
     <button class="lightbox__close" type="button" aria-label="Закрыть" data-lightbox-close></button>
     <img class="lightbox__image" alt="" loading="lazy" decoding="async" data-lightbox-image>
   </div>
-  <footer class="site-footer"><p>Юра Пинаев</p><nav aria-label="Навигация в подвале"><a href="contacts.html">Контакты</a><a href="otzyvy.html">Отзывы</a><a href="muzyka.html">Музыка</a></nav></footer>
+  <footer class="site-footer">
+    <p>Юра Пинаев</p>
+    <nav aria-label="Навигация в подвале">
+      <a href="korporativy.html">Корпоративы</a>
+      <a href="svadby.html">Свадьбы</a>
+      <a href="yubilei.html">Юбилеи</a>
+      <a href="muzyka.html">Музыка</a>
+      <a href="otzyvy.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </footer>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

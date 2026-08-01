@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Музыка | Юра Пинаев</title>
-  <meta name="description" content="Музыкальные форматы Юры Пинаева: вокал, гитара, клавиши и импровизация в моменте.">
+  <title>Живая музыка и импровизация | Юра Пинаев</title>
+  <meta name="description" content="Живая музыка на мероприятиях: вокал, гитара, клавиши, музыкальный welcome и импровизация с гостями.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,16 +12,64 @@
 </head>
 <body>
   <header class="site-header" data-header>
-    <a class="brand" href="index.html" aria-label="Юра Пинаев, на главную"><span class="brand__name">Юра Пинаев</span><span class="brand__caption">сценический артист и ведущий мероприятий</span></a>
-    <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
+    <a class="brand" href="index.html" aria-label="Юра Пинаев, на главную"><span class="brand__name">Юра Пинаев</span><span class="brand__caption">ведущий • музыка • импровизация</span></a>
+    <button class="nav-toggle" type="button" aria-label="Открыть разделы сайта" aria-expanded="false" data-nav-toggle>
+      <span class="nav-toggle__label">Разделы</span>
+      <span class="nav-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+    </button>
     <nav class="site-nav" aria-label="Основная навигация" data-nav>
+      <a class="site-nav__home" href="index.html">Главная</a>
       <a href="korporativy.html">Корпоративы</a><a href="svadby.html">Свадьбы</a><a href="yubilei.html">Юбилеи</a><a href="muzyka.html" aria-current="page">Музыка</a><a href="otzyvy.html">Отзывы</a><a href="contacts.html">Контакты</a>
+      <a class="button site-nav__cta" href="https://t.me/yuripinaev" target="_blank" rel="noopener">Проверить дату</a>
     </nav>
   </header>
   <main>
     <section class="page-hero section-reveal">
-      <div><p class="eyebrow">Music</p><h1>Я не просто включаю музыку. Я могу создавать её прямо в моменте</h1></div>
-      <p>Вокал, гитара, клавиши и музыкальная импровизация становятся частью вечера, а не отдельным номером.</p>
+      <div><p class="eyebrow">Музыка</p><h1>Живая музыка внутри события</h1></div>
+      <p>Вокал, гитара, клавиши и музыкальная импровизация становятся способом общения с залом и частью общей программы.</p>
+    </section>
+
+    <section class="video-section video-section--early section-reveal" id="live-video">
+      <div class="section-heading">
+        <p class="eyebrow">Живые фрагменты</p>
+        <h2>Музыка на мероприятиях</h2>
+        <p>От фонового сета во время сбора гостей до вокальных и инструментальных эпизодов внутри вечера.</p>
+      </div>
+      <div class="video-grid video-grid--featured">
+        <article class="video-card">
+          <button class="video-trigger" type="button" data-video-src="assets/video/piano-welcome-web.mp4" aria-label="Воспроизвести видео «Музыкальный welcome на клавишах»">
+            <img src="assets/images/optimized/video/piano-welcome.webp" alt="" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="video-trigger__shade" aria-hidden="true"></span>
+            <span class="video-trigger__play" aria-hidden="true"></span>
+          </button>
+          <div class="video-card__copy">
+            <h3>Музыкальный welcome на клавишах</h3>
+            <p>Живой фоновый сет во время сбора гостей. Музыка создаёт настроение, но не мешает людям знакомиться и общаться.</p>
+          </div>
+        </article>
+        <article class="video-card">
+          <button class="video-trigger" type="button" data-video-src="assets/video/VID_20260304_124145_523.mp4" aria-label="Воспроизвести видео «Живое музыкальное выступление»">
+            <img src="assets/images/optimized/video/live-performance.webp" alt="" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="video-trigger__shade" aria-hidden="true"></span>
+            <span class="video-trigger__play" aria-hidden="true"></span>
+          </button>
+          <div class="video-card__copy">
+            <h3>Живое музыкальное выступление</h3>
+            <p>Гитара, вокал и прямой контакт с гостями во время вечера.</p>
+          </div>
+        </article>
+        <article class="video-card">
+          <button class="video-trigger" type="button" data-video-src="assets/video/0502.mp4" aria-label="Воспроизвести видео «Три песни для первого танца»">
+            <img src="assets/images/optimized/video/music-3.webp" alt="" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="video-trigger__shade" aria-hidden="true"></span>
+            <span class="video-trigger__play" aria-hidden="true"></span>
+          </button>
+          <div class="video-card__copy">
+            <h3>Три песни для первого танца</h3>
+            <p>Вокальные фрагменты с вариантами музыки для первого танца.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="wide-media section-reveal">
@@ -32,22 +80,22 @@
 
     <section class="content-band section-reveal">
       <div class="section-heading">
-        <p class="eyebrow">Welcome</p>
-        <h2>Музыкальный welcome на клавишах</h2>
+        <p class="eyebrow">Возможности</p>
+        <h2>Музыка меняет ритм вечера</h2>
       </div>
       <div class="text-panel">
-        <p>Музыкальный welcome на клавишах — живой фоновый сет во время сбора гостей. Лёгкие мелодии и импровизации создают настроение с первых минут, не перетягивая внимание на сцену.</p>
+        <p>Клавиши встречают гостей, гитара поддерживает камерный момент, вокальный блок собирает внимание, а новая песня может родиться прямо из разговора с человеком в зале.</p>
       </div>
     </section>
 
     <section class="feature-grid feature-grid--music section-reveal" aria-label="Музыкальные форматы">
-      <article class="feature-card"><h3>Живой вокал</h3><p>Песни, которые поддерживают момент, а не звучат отдельно от него.</p></article>
+      <article class="feature-card"><h3>Живой вокал</h3><p>Песни, которые поддерживают конкретный момент вечера.</p></article>
       <article class="feature-card"><h3>Гитара</h3><p>Камерная энергия и прямой контакт с залом.</p></article>
       <article class="feature-card"><h3>Клавиши</h3><p>Welcome, фоновые мелодии и точные эмоциональные акценты.</p></article>
       <article class="feature-card"><h3>Музыкальный краудворк</h3><p>Песни и шутки рождаются из общения с гостями.</p></article>
       <article class="feature-card"><h3>Музыкально-комедийная импровизация</h3><p>Живой номер прямо из того, что происходит в зале.</p></article>
       <article class="feature-card"><h3>Песни про людей</h3><p>Про молодожёнов, именинника и гостей — с точным личным попаданием.</p></article>
-      <article class="feature-card"><h3>Акустическое караоке</h3><p>Гости поют свободно, без давления и лишней суеты.</p></article>
+      <article class="feature-card"><h3>Акустическое караоке</h3><p>Знакомые песни с живым сопровождением и вниманием к темпу гостей.</p></article>
       <article class="feature-card"><h3>Камерные вокальные блоки</h3><p>Несколько песен, которые собирают внимание и воздух в одном месте.</p></article>
     </section>
 
@@ -57,38 +105,88 @@
       <div class="media-placeholder"><img class="media-image" src="assets/images/optimized/music/ChatGPT Image 29 апр. 2026 г., 00_25_56.webp" alt="Кинематографичная музыкальная атмосфера" loading="lazy" width="1400" height="788" decoding="async"></div>
     </section>
 
-    <section class="wide-media section-reveal">
+    <section class="video-section section-reveal">
       <div class="section-heading">
-        <p class="eyebrow">Видео</p>
-        <h2>Живые фрагменты</h2>
-        <p>Короткие живые фрагменты с вечеров: реакция гостей, музыка и то, как это ощущается в моменте.</p>
+        <p class="eyebrow">Общение становится музыкой</p>
+        <h2>Музыкальная импровизация с гостями</h2>
+        <p>Сначала появляется разговор, голос или реакция человека. Затем из этого материала рождается музыкальная сцена.</p>
+      </div>
+      <div class="video-grid video-grid--featured">
+        <article class="video-card">
+          <button class="video-trigger" type="button" data-video-src="assets/video/chiki-musical-crowdwork.mp4" aria-label="Воспроизвести видео «История зрителя превращается в песню»">
+            <img src="assets/images/optimized/video/chiki-musical-crowdwork.webp" alt="" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="video-trigger__shade" aria-hidden="true"></span>
+            <span class="video-trigger__play" aria-hidden="true"></span>
+          </button>
+          <div class="video-card__copy">
+            <h3>История зрителя превращается в песню</h3>
+            <p>Сначала разговор с человеком из зала, затем — музыкальная импровизация прямо из его истории.</p>
+          </div>
+        </article>
+        <article class="video-card">
+          <button class="video-trigger" type="button" data-video-src="assets/video/document_5413400350658952734.mp4" aria-label="Воспроизвести видео «Мелодия из голоса гостя»">
+            <img src="assets/images/optimized/video/voice-melody.webp" alt="" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="video-trigger__shade" aria-hidden="true"></span>
+            <span class="video-trigger__play" aria-hidden="true"></span>
+          </button>
+          <div class="video-card__copy">
+            <h3>Мелодия из голоса гостя</h3>
+            <p>Гость записывает короткий звук, а затем этот голос становится основой для новой мелодии.</p>
+          </div>
+        </article>
+        <article class="video-card">
+          <button class="video-trigger" type="button" data-video-src="assets/video/autotune-battle.mp4" aria-label="Воспроизвести видео «Автотюн-баттл с гостем»">
+            <img src="assets/images/optimized/video/autotune-battle.webp" alt="" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="video-trigger__shade" aria-hidden="true"></span>
+            <span class="video-trigger__play" aria-hidden="true"></span>
+          </button>
+          <div class="video-card__copy">
+            <h3>Автотюн-баттл с гостем</h3>
+            <p>Папа выпускника вышел попробовать автотюн, и через несколько секунд это превратилось в импровизационный баттл.</p>
+            <p class="video-card__note">Живой фрагмент, снятый гостем на телефон.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="video-grid video-grid--portrait video-grid--spaced section-reveal" aria-label="Видео с мероприятий">
-      <article class="video-card video-card--portrait">
-        <video controls preload="none" poster="assets/images/optimized/video/music-1.webp" src="assets/video/document_5413400350658952734.mp4"></video>
-        <h3>Гости смеются после интерактива</h3>
-        <p>Живой отклик зала после импровизационного момента.</p>
-      </article>
-      <article class="video-card video-card--portrait">
-        <video controls preload="none" poster="assets/images/optimized/video/music-2.webp" src="assets/video/VID_20260304_124145_523.mp4"></video>
-        <h3>Живое выступление на свадьбе</h3>
-        <p>Фрагмент, который сняла невеста во время вечера.</p>
-      </article>
-      <article class="video-card video-card--portrait">
-        <video controls preload="none" poster="assets/images/optimized/video/music-3.webp" src="assets/video/0502.mp4"></video>
-        <h3>А капелла в несколько голосов</h3>
-        <p>Голосовой музыкальный эпизод без лишней постановки.</p>
-      </article>
-      <article class="video-card video-card--portrait">
-        <video controls preload="none" poster="assets/images/optimized/video/music-4.webp" src="assets/video/document_5413400350658952719 (1).mp4"></video>
-        <h3>История любви не по шаблону</h3>
-        <p>Личный свадебный формат вместо стандартного рассказа со сцены.</p>
-      </article>
+    <nav class="related-sections section-reveal" aria-label="Другие разделы">
+      <p>Другие разделы</p>
+      <div>
+        <a href="korporativy.html">Корпоративы</a>
+        <a href="svadby.html">Свадьбы</a>
+        <a href="yubilei.html">Юбилеи</a>
+      </div>
+    </nav>
+
+    <section class="cta-band section-reveal">
+      <div class="cta-band__copy">
+        <p class="eyebrow">Прямой контакт</p>
+        <h2>Обсудить музыкальный формат</h2>
+        <p>Напишите дату, формат события и задачу. Я подскажу, как музыка может работать внутри программы.</p>
+      </div>
+      <a class="button" href="https://t.me/yuripinaev" target="_blank" rel="noopener">Написать в Telegram</a>
     </section>
   </main>
-  <footer class="site-footer"><p>Юра Пинаев</p><nav aria-label="Навигация в подвале"><a href="contacts.html">Контакты</a><a href="otzyvy.html">Отзывы</a><a href="muzyka.html">Музыка</a></nav></footer>
+
+  <div class="video-modal" role="dialog" aria-modal="true" aria-labelledby="video-modal-title" hidden data-video-modal>
+    <div class="video-modal__panel" data-video-modal-panel>
+      <h2 class="visually-hidden" id="video-modal-title">Просмотр видео</h2>
+      <button class="video-modal__close" type="button" aria-label="Закрыть видео" data-video-modal-close></button>
+      <video controls playsinline preload="none" data-video-modal-player></video>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Юра Пинаев</p>
+    <nav aria-label="Навигация в подвале">
+      <a href="korporativy.html">Корпоративы</a>
+      <a href="svadby.html">Свадьбы</a>
+      <a href="yubilei.html">Юбилеи</a>
+      <a href="muzyka.html">Музыка</a>
+      <a href="otzyvy.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </footer>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
