@@ -1,0 +1,173 @@
+
+/* Homepage promo for the course "НЕ ТЕРЯЙСЯ" */
+.site-nav__course {
+  color: var(--gold);
+}
+
+.improv-home-chip {
+  align-items: center;
+  border: 1px solid rgba(198, 167, 107, 0.34);
+  border-radius: 999px;
+  color: var(--milk);
+  display: inline-flex;
+  font-size: 0.76rem;
+  font-weight: 600;
+  gap: 10px;
+  justify-self: start;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+  padding: 10px 14px;
+  text-decoration: none;
+  transition: background 220ms ease, border-color 220ms ease, transform 220ms ease;
+}
+
+.improv-home-chip span {
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.improv-home-chip:hover {
+  background: rgba(198, 167, 107, 0.08);
+  border-color: rgba(198, 167, 107, 0.58);
+  transform: translateY(-2px);
+}
+
+.improv-promo {
+  align-items: stretch;
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: clamp(24px, 5vw, 64px);
+  grid-template-columns: minmax(0, 1fr) minmax(220px, .42fr);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max);
+  padding: clamp(54px, 8vw, 92px) clamp(18px, 4vw, 58px);
+  width: 100%;
+}
+
+.improv-promo__copy {
+  align-content: center;
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+
+.improv-promo h2 {
+  font-size: clamp(3.2rem, 7.5vw, 6.3rem);
+  letter-spacing: -0.055em;
+  line-height: .86;
+}
+
+.improv-promo__lead {
+  color: var(--muted);
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.65;
+  max-width: 720px;
+}
+
+.improv-promo__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.improv-promo__meta span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--milk);
+  font-size: .8rem;
+  padding: 8px 12px;
+}
+
+.improv-promo__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.improv-promo__actions > span {
+  color: var(--faint);
+  font-size: .78rem;
+  max-width: 310px;
+}
+
+.improv-promo__stamp {
+  align-content: center;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(circle at 26% 20%, rgba(198, 167, 107, .18), transparent 38%),
+    var(--panel);
+  border: 1px solid rgba(198, 167, 107, .26);
+  border-radius: 999px;
+  display: grid;
+  justify-items: center;
+  place-self: center;
+  text-align: center;
+  width: min(100%, 280px);
+}
+
+.improv-promo__stamp span {
+  color: var(--gold);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+.improv-promo__stamp strong {
+  color: var(--milk);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3.6rem, 7vw, 5.8rem);
+  font-weight: 600;
+  line-height: .9;
+}
+
+.improv-promo__stamp small {
+  color: var(--muted);
+  font-size: .85rem;
+  margin-top: 8px;
+}
+
+@media (max-width: 980px) {
+  .improv-promo {
+    grid-template-columns: 1fr;
+  }
+
+  .improv-promo__stamp {
+    justify-self: start;
+    width: 190px;
+  }
+}
+
+@media (max-width: 620px) {
+  .improv-home-chip {
+    border-radius: 14px;
+    line-height: 1.35;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .improv-promo {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .improv-promo h2 {
+    font-size: clamp(3rem, 17vw, 4.6rem);
+  }
+
+  .improv-promo__actions {
+    align-items: stretch;
+    display: grid;
+  }
+
+  .improv-promo__actions .button {
+    width: 100%;
+  }
+
+  .improv-promo__stamp {
+    display: none;
+  }
+}
