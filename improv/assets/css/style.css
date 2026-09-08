@@ -36,7 +36,11 @@ h1{font-size:clamp(58px,9vw,112px);line-height:.88;letter-spacing:-.07em;margin-
 h2{font-size:clamp(36px,5.2vw,64px);line-height:.98;letter-spacing:-.048em;margin-bottom:20px}
 h3{font-size:21px;line-height:1.16;letter-spacing:-.025em}
 .lead{font-size:clamp(19px,2.2vw,27px);line-height:1.32;color:#dfdee3;max-width:720px}
-.hero__facts{display:flex;flex-wrap:wrap;gap:9px;margin:28px 0}
+.hero__course{margin:22px 0 16px;font-size:16px;line-height:1.4}
+.hero__label{display:block;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.hero__course .hero__label{margin-bottom:6px}
+.hero__facts{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 24px}
+.hero__facts .hero__label{width:100%}
 .pill{border:1px solid var(--line);border-radius:999px;padding:9px 13px;color:#dbdae0;font-size:14px}
 .hero__actions{display:flex;flex-wrap:wrap;gap:10px}
 .ifline{display:flex;align-items:center;gap:10px;margin-top:20px;color:var(--muted);font-size:13px}
@@ -54,6 +58,7 @@ section{padding:82px 0;border-top:1px solid rgba(255,255,255,.06)}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:25px}
 .card p{color:var(--muted);margin-bottom:0}
 .big-statement{max-width:1000px;font-size:clamp(29px,4.4vw,54px);line-height:1.1;letter-spacing:-.042em}
+.big-statement strong{font-weight:800;color:#fff}
 .media-collage{display:grid;grid-template-columns:1.15fr .85fr;gap:15px;margin-top:28px}
 .media-collage__stack{display:grid;grid-template-rows:1fr 1fr;gap:15px}
 .media-collage img{width:100%;height:100%;object-fit:cover;border-radius:var(--r);min-height:260px}
@@ -68,7 +73,9 @@ section{padding:82px 0;border-top:1px solid rgba(255,255,255,.06)}
 .video-card h3{font-size:17px;margin:14px 8px 6px}
 .video-card p{font-size:14px;color:var(--muted);margin:0 8px 8px}
 .program{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.program .card{min-height:244px}
+.program .card{min-height:0;padding:22px}
+.program .card h3{font-size:20px;margin-bottom:12px}
+.program .num{margin-bottom:12px}
 .num{color:var(--a);font-size:13px;font-weight:800;margin-bottom:16px}
 .final-proof{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px;align-items:center}
 .final-proof img{width:100%;border-radius:var(--r);min-height:430px;object-fit:cover}
